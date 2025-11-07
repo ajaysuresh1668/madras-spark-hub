@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, GraduationCap } from "lucide-react";
+import { ArrowRight, GraduationCap, Phone, FileText } from "lucide-react";
 import heroImage from "@/assets/hero-campus.jpg";
-import logo from "@/assets/mec-logo.png";
+import logo from "@/assets/mec-logo-purple.png";
 
 const Hero = () => {
   return (
@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl">
           {/* Logo and College Name */}
-          <div className="flex items-center gap-4 mb-8 animate-fade-in">
+          <div className="flex items-center gap-4 mb-6 animate-fade-in">
             <img 
               src={logo} 
               alt="Madras Engineering College Logo" 
@@ -31,6 +31,22 @@ const Hero = () => {
               <h2 className="text-3xl sm:text-4xl lg:text-6xl font-heading font-bold text-accent leading-tight">
                 College
               </h2>
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex items-center gap-2 bg-white/15 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30">
+              <Phone className="w-5 h-5 text-accent" />
+              <a href="tel:9444308959" className="text-white font-semibold hover:text-accent transition-colors">
+                94443 08959
+              </a>
+            </div>
+            <div className="flex items-center gap-2 bg-white/15 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30">
+              <FileText className="w-5 h-5 text-accent" />
+              <span className="text-white font-semibold">
+                TNEA Code: <span className="text-accent">1203</span>
+              </span>
             </div>
           </div>
 
