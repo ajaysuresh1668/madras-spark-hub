@@ -4,54 +4,54 @@ import { Code2, Database, Brain, TrendingUp, Laptop } from "lucide-react";
 const courses = [
   {
     id: 1,
-    code: "BE CSE",
+    code: "BE-CSE",
     title: "Computer Science & Engineering",
     icon: Code2,
     description: "Master the fundamentals of computing, algorithms, and software development",
     highlights: ["Core Programming", "Algorithms & Data Structures", "Software Engineering"],
-    color: "from-blue-500 to-blue-600",
+    color: "from-purple-500 to-purple-600",
   },
   {
     id: 2,
-    code: "B.Tech IT",
+    code: "B.Tech-IT",
     title: "Information Technology",
     icon: Laptop,
     description: "Explore networking, web technologies, and information systems",
     highlights: ["Network Security", "Web Development", "Cloud Computing"],
-    color: "from-cyan-500 to-cyan-600",
+    color: "from-purple-600 to-purple-700",
   },
   {
     id: 3,
-    code: "B.Tech AIDS",
+    code: "B.Tech-AIDS",
     title: "AI & Data Science",
     icon: Database,
     description: "Unlock insights from data with advanced analytics and AI techniques",
     highlights: ["Big Data Analytics", "Machine Learning", "Data Visualization"],
-    color: "from-emerald-500 to-emerald-600",
+    color: "from-violet-500 to-violet-600",
   },
   {
     id: 4,
-    code: "B.Tech AIML",
+    code: "B.Tech-AIML",
     title: "AI & Machine Learning",
     icon: Brain,
     description: "Build intelligent systems that learn and adapt autonomously",
     highlights: ["Deep Learning", "Neural Networks", "NLP"],
-    color: "from-violet-500 to-violet-600",
+    color: "from-purple-700 to-purple-800",
   },
   {
     id: 5,
-    code: "B.Tech CSBS",
+    code: "B.Tech-CSBS",
     title: "Computer Science & Business Systems",
     icon: TrendingUp,
     description: "Bridge technology and business with integrated computing solutions",
     highlights: ["Business Analytics", "ERP Systems", "Digital Transformation"],
-    color: "from-orange-500 to-orange-600",
+    color: "from-purple-500 to-violet-600",
   },
 ];
 
 const Courses = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary/20">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -82,7 +82,7 @@ const Courses = () => {
                   </div>
 
                   {/* Course Code */}
-                  <div className="text-sm font-semibold text-accent mb-2">
+                  <div className="text-sm font-bold text-primary mb-2 bg-primary/10 px-3 py-1 rounded-full inline-block">
                     {course.code}
                   </div>
 
