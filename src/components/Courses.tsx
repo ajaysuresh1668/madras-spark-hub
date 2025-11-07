@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { Code2, Database, Brain, TrendingUp, Laptop } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Code2, Database, Brain, TrendingUp, Laptop, MessageCircle } from "lucide-react";
 
 const courses = [
   {
@@ -106,12 +107,15 @@ const Courses = () => {
                     ))}
                   </div>
 
-                  {/* Learn More Link */}
+                  {/* Let's Chat Button */}
                   <div className="mt-6 pt-6 border-t border-border">
-                    <span className="text-primary font-semibold text-sm group-hover:text-accent transition-colors inline-flex items-center">
-                      Learn More 
-                      <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                    </span>
+                    <Button 
+                      onClick={() => window.open(`https://wa.me/919444308959?text=Hi, I'm interested in ${course.code} - ${course.title}`, '_blank')}
+                      className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all"
+                    >
+                      <MessageCircle className="mr-2 h-4 w-4" />
+                      Let's Chat
+                    </Button>
                   </div>
                 </div>
               </Card>
