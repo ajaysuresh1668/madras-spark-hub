@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, GraduationCap, Phone, FileText } from "lucide-react";
+import { ArrowRight, GraduationCap } from "lucide-react";
 import heroImage from "@/assets/hero-campus.jpg";
 import logo from "@/assets/mec-logo-purple.png";
 
@@ -29,21 +29,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Contact Info */}
-          <div className="flex flex-wrap gap-4 mb-8">
-            <div className="flex items-center gap-2 bg-primary/10 backdrop-blur-sm px-5 py-3 rounded-xl border-2 border-primary/30 hover:border-primary transition-colors">
-              <Phone className="w-5 h-5 text-primary" />
-              <a href="tel:9444308959" className="text-black font-semibold hover:text-primary transition-colors">
-                94443 08959
-              </a>
-            </div>
-            <div className="flex items-center gap-2 bg-primary/10 backdrop-blur-sm px-5 py-3 rounded-xl border-2 border-primary/30 hover:border-primary transition-colors">
-              <FileText className="w-5 h-5 text-primary" />
-              <span className="text-black font-semibold">
-                TNEA Code: <span className="text-primary font-bold">1203</span>
-              </span>
-            </div>
-          </div>
 
           {/* Tagline */}
           <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 mb-8 max-w-2xl leading-relaxed">
