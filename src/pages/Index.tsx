@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Courses from "@/components/Courses";
 import Recruiters from "@/components/Recruiters";
@@ -12,6 +13,7 @@ import Location from "@/components/Location";
 const Index = () => {
   return (
     <main className="min-h-screen">
+      <Navbar />
       <Hero />
       <Courses />
       <Recruiters />
