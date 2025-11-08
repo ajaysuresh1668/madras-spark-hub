@@ -47,17 +47,23 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-primary to-accent">
-      <div className="container mx-auto max-w-2xl text-center">
-        <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 sm:p-12 border-2 border-white/20 shadow-2xl">
-          <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mx-auto mb-6 shadow-xl">
-            <Phone className="w-10 h-10 text-primary" />
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-primary to-accent overflow-hidden relative">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }} />
+      </div>
+      
+      <div className="container mx-auto max-w-2xl text-center relative z-10">
+        <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 sm:p-12 border-2 border-white/20 shadow-2xl animate-scale-in hover:scale-105 transition-transform">
+          <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mx-auto mb-6 shadow-xl animate-pulse-glow">
+            <Phone className="w-10 h-10 text-primary animate-float" />
           </div>
           
-          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4 animate-fade-in">
             Get Admission Information
           </h2>
-          <p className="text-lg text-white/90 mb-8">
+          <p className="text-lg text-white/90 mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             Enter your mobile number and we'll reach out to help with your admission
           </p>
 

@@ -44,7 +44,7 @@ const FAQ = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-foreground mb-4">
             Frequently Asked Questions
           </h2>
@@ -58,7 +58,8 @@ const FAQ = () => {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="border-2 border-gray-200 rounded-xl px-6 hover:border-primary transition-colors"
+              className="border-2 border-gray-200 rounded-xl px-6 hover:border-primary hover:shadow-lg transition-all animate-slide-in-left"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <AccordionTrigger className="text-left hover:no-underline py-6">
                 <span className="text-lg font-semibold text-foreground pr-4">

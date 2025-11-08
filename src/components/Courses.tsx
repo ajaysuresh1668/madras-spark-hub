@@ -55,7 +55,7 @@ const Courses = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-foreground mb-4">
             Our Programs
           </h2>
@@ -66,19 +66,20 @@ const Courses = () => {
 
         {/* Courses Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {courses.map((course) => {
+          {courses.map((course, index) => {
             const Icon = course.icon;
             return (
               <Card 
                 key={course.id}
-                className="group relative overflow-hidden border-2 hover:border-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
+                className="group relative overflow-hidden border-2 hover:border-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer animate-scale-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Gradient Background */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${course.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                 
                 <div className="relative p-6 sm:p-8">
                   {/* Icon */}
-                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${course.color} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${course.color} flex items-center justify-center mb-6 shadow-lg group-hover:scale-125 group-hover:rotate-6 transition-all duration-300 animate-float`} style={{ animationDelay: `${index * 0.3}s` }}>
                     <Icon className="w-7 h-7 text-white" />
                   </div>
 

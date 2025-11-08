@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-foreground mb-4">
             Why Choose Madras Engineering College?
           </h2>
@@ -52,10 +52,11 @@ const WhyChooseUs = () => {
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="group flex gap-4 p-6 bg-gradient-to-br from-white to-purple-50/30 rounded-2xl border-2 border-purple-100 hover:border-primary transition-all hover:shadow-lg"
+              className="group flex gap-4 p-6 bg-gradient-to-br from-white to-purple-50/30 rounded-2xl border-2 border-purple-100 hover:border-primary transition-all hover:shadow-lg hover:scale-105 animate-slide-in-left"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg group-hover:scale-125 transition-transform animate-pulse-glow">
                   <CheckCircle2 className="w-6 h-6 text-white" />
                 </div>
               </div>

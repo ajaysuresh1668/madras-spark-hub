@@ -17,7 +17,7 @@ const ExtraCourses = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50/50 to-white">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-foreground mb-4">
             Extra Learning Opportunities
           </h2>
@@ -32,9 +32,10 @@ const ExtraCourses = () => {
             return (
               <div
                 key={index}
-                className="group relative bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-primary transition-all hover:shadow-xl hover:-translate-y-1 cursor-pointer"
+                className="group relative bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-primary transition-all hover:shadow-xl hover:-translate-y-2 cursor-pointer animate-scale-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${course.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${course.color} flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all shadow-lg animate-float`} style={{ animationDelay: `${index * 0.2}s` }}>
                   <Icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-sm font-semibold text-foreground leading-tight">
